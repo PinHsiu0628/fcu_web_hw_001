@@ -10,12 +10,12 @@
 <nav class="fixed w-full top-0 left-0 py-3 px-8 border-b-1 border-black/20 z-10 bg-white">
     <div class="flex justify-between items-center max-w-[1080px] mx-auto">
         <a class="font-extrabold cursor-pointer select-none flex" href="https://x-rank.org">
-            <svg className={"text-foreground"} fill="none" height="36" viewBox="0 0 32 32" width="36">
+            <svg class={"text-foreground"} fill="none" height="36" viewBox="0 0 32 32" width="36">
                 <path
-                        clipRule="evenodd"
-                        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-                        fill="currentColor"
-                        fillRule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+                    fill="currentColor"
+                    clip-path="evenodd"
                 />
             </svg>
             <div class="my-auto">X-Rank</div>
@@ -121,6 +121,18 @@
                     </div>
                 </div>
             </div>
+            <div id="retry" class="pt-8 flex">
+                <div class="w-5 my-auto" id="waitSecond"></div>
+                <div class="my-auto">
+                    秒後將嘗試重新連線
+                </div>
+                <div id="cancelRetry" class="bg-red-500/20 hover:bg-red-500/30 text-pink-500 rounded-lg px-4 py-1 cursor-pointer ml-2">取消</div>
+            </div>
+            <div id="goto" class="hidden pt-10">
+                <a href="https://x-rank.org">
+                    <span class="bg-blue-500/20 hover:bg-blue-500/30 text-blue-500 rounded-lg px-4 py-1 cursor-pointer ml-2">直接前往</span>
+                </a>
+            </div>
             <div class="pt-8 flex gap-4 flex-wrap">
                 <div
                     class="w-full max-w-sm py-6 p-4 text-gray-900 bg-white rounded-lg inset-shadow-sm shadow-md"
@@ -184,8 +196,32 @@
 </footer>
 </body>
 <script>
-    const date = new Date();
+    const date = new Date()
 
-    document.getElementById('year').innerText = date.getFullYear().toString();
+    document.getElementById('year').innerText = date.getFullYear().toString()
+
+    let second = 10
+
+    const waitSecond = document.getElementById('waitSecond')
+
+    waitSecond.innerText = second
+
+    const interval = setInterval(() => {
+        second--
+
+        waitSecond.innerText = second
+
+        if (second === 0) {
+            clearInterval(interval)
+            window.location.reload()
+        }
+    }, 1000)
+
+    document.getElementById('cancelRetry').addEventListener('click', () => {
+        clearInterval(interval)
+
+        document.getElementById('retry').classList.add('hidden')
+        document.getElementById('goto').classList.remove('hidden')
+    })
 </script>
 </html>
