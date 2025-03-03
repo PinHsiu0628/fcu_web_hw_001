@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Waiting...</title>
+</head>
+<body>
+<nav class="fixed w-full top-0 left-0 py-3 px-8 border-b-1 border-black/20 z-10 bg-white">
+    <div class="flex justify-between items-center max-w-[1080px] mx-auto">
+        <div class="font-extrabold cursor-pointer select-none flex">
+            <svg className={"text-foreground"} fill="none" height="36" viewBox="0 0 32 32" width="36">
+                <path
+                        clipRule="evenodd"
+                        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+                        fill="currentColor"
+                        fillRule="evenodd"
+                />
+            </svg>
+            <div class="my-auto">X-Rank</div>
+        </div>
+        <div class="flex gap-4">
+            <a
+                class="font-bold"
+                href="https://x-rank.org"
+            >
+                首頁
+            </a>
+            <a>列表</a>
+        </div>
+        <div>
+            <img
+                class="cursor-pointer"
+                src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png"
+                alt="user"
+                width="32"
+            />
+        </div>
+    </div>
+</nav>
+<div class="max-w-[1920px] mx-auto z-0 pt-16">
+    <div class="min-h-screen">
+        <div class="relative rounded-lg bg-black/5 p-2 mt-16 mx-8">
+            <div class="relative flex text-center border-b-1 border-black/20 pb-4">
+                <div class="flex pl-3.5 pt-3"><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.5 mr-1.5 h-3 w-3 text-red-500/75">
+                    <circle r="12" cy="12" cx="12"></circle>
+                </svg><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.75 mr-1.5 h-3 w-3 text-yellow-500/75">
+                    <circle r="12" cy="12" cx="12"></circle>
+                </svg><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.75 mr-1.5 h-3 w-3 text-green-500/75">
+                    <circle r="12" cy="12" cx="12"></circle>
+                </svg></div><span class="absolute inset-x-0 top-2 text-xs text-slate-500">X-Rank.tsx</span>
+            </div>
+            <div>
+                <div class="mt-2 space-y-1.5 px-5 pb-10">
+                    <p class="mt-4 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        <span class="text-orange-600">const</span> <span class="text-blue-500">getData</span> = <span class="text-pink-500">async</span>() => {
+                    </p>
+                    <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        <span class="text-orange-600">const</span> req = <span class="text-orange-600">await</span> <span class="text-blue-500">const</span>(<span class="text-green-600">`</span>${<span class="text-pink-400">process.env.NEXT_PUBLIC_API_URL</span>}<span class="text-green-600">/apis/get_data.php`</span>, {
+                    </p>
+                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        <span class="text-pink-400">method</span>: <span class="text-green-600">"POST"</span>,
+                    </p>
+                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        headers: {
+                    </p>
+                    <p class="ml-9 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    </p>
+                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        },
+                    </p>
+                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        cache: "no-store"
+                    </p>
+                    <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        })
+                    </p>
+                    <p class="mt-6 ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
+                        setData(await req.json())
+                    </p>
+                    <p class="font-mono text-xs font-normal tracking-wide text-violet-400">
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-8 border-t-1 border-black/20">
+        <p class="mt-1 text-center text-small text-black/50">
+            &copy; <span id="year"></span> X-Rank. All rights reserved.
+        </p>
+        <p class="mt-1 text-center text-small text-black/50">
+            Designed by PinHsiu0628
+        </p>
+    </footer>
+</div>
+</body>
+<script>
+    const date = new Date();
+
+    document.getElementById('year').innerText = date.getFullYear().toString();
+</script>
+</html>
