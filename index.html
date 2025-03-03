@@ -58,7 +58,7 @@
                             <span class="text-orange-600">const</span> <span class="text-blue-500">getData</span> = <span class="text-pink-500">async</span>() => {
                         </p>
                         <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
-                            <span class="text-orange-600">const</span> req = <span class="text-orange-600">await</span> <span class="text-blue-500">fetch</span>(<span class="text-green-600">`</span>${<span class="text-pink-400">process.env.NEXT_PUBLIC_API_URL</span>}<span class="text-green-600">/apis/get_data.php`</span>, {
+                            <span class="text-orange-600">const</span> req = <span class="text-orange-600">await</span> <span class="text-blue-500">fetch</span>(<span class="text-green-600">`</span>${<span class="text-pink-400">env.API_URL</span>}<span class="text-green-600">/apis/get_data.php`</span>, {
                         </p>
                         <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
                             <span class="text-pink-400">method</span>: <span class="text-green-600">"POST"</span>,
@@ -114,19 +114,19 @@
                     </div>
                 </div>
             </div>
-            <div class="pt-8">
+            <div class="pt-8 flex gap-4 flex-wrap">
                 <div
-                    class="w-full max-w-sm py-6 p-4 text-gray-900 bg-white rounded-lg inset-shadow-sm shadow-md"
+                        class="w-full max-w-sm py-6 p-4 text-gray-900 bg-white rounded-lg inset-shadow-sm shadow-md"
                 >
                     <div class="flex">
                         <div
-                            class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl"
+                                class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl"
                         >
                             Kuo
                         </div>
                         <div class="ms-3 text-sm font-normal">
                             <div class="text-sm font-semibold">
-                                PinHsiu0628
+                                創辦人 / PinHsiu0628
                             </div>
                             <div class="text-sm font-normal">非常感謝各位對平台的支持！</div>
                             <div class="text-sm font-normal">但由於目前流量過高，導致伺服器過載</div>
@@ -138,18 +138,40 @@
                         </div>
                     </div>
                 </div>
+                <div
+                        class="w-full max-w-sm py-6 p-4 text-gray-900 bg-white rounded-lg inset-shadow-sm shadow-md"
+                >
+                    <div class="flex h-full">
+                        <div
+                                class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl"
+                        >
+                            Kuo
+                        </div>
+                        <div class="flex flex-col ms-3 text-sm font-normal h-32">
+                            <div class="text-sm font-semibold">
+                                技術部 / 還是 PinHsiu0628
+                            </div>
+                            <div class="text-sm font-normal">草...又要加班了...</div>
+                            <div class="relative h-full">
+                                <div class="absolute bottom-0 pt-2 text-xs font-medium text-blue-600 dark:text-blue-500">
+                                    幾秒前發布
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <footer class="py-8 border-t-1 border-black/20">
-        <p class="mt-1 text-center text-small text-black/50">
-            &copy; <span id="year"></span> X-Rank. All rights reserved.
-        </p>
-        <p class="mt-1 text-center text-small text-black/50">
-            Designed by PinHsiu0628
-        </p>
-    </footer>
 </div>
+<footer class="py-8 border-t-1 border-black/20">
+    <p class="mt-1 text-center text-small text-black/50">
+        &copy; <span id="year"></span> X-Rank. All rights reserved.
+    </p>
+    <p class="mt-1 text-center text-small text-black/50">
+        Designed by PinHsiu0628
+    </p>
+</footer>
 </body>
 <script>
     const date = new Date();
