@@ -41,79 +41,104 @@
 </nav>
 <div class="max-w-[1920px] mx-auto z-0 pt-16">
     <div class="min-h-screen">
-        <div class="relative rounded-xl inset-shadow-sm shadow-xl p-2 mt-16 mx-8 max-w-[1080px] overflow-hidden mx-auto">
-            <div class="relative flex text-center border-b-1 border-black/20 pb-4">
-                <div class="flex pl-3.5 pt-3"><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.5 mr-1.5 h-3 w-3 text-red-500/75">
-                    <circle r="12" cy="12" cx="12"></circle>
-                </svg><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.75 mr-1.5 h-3 w-3 text-yellow-500/75">
-                    <circle r="12" cy="12" cx="12"></circle>
-                </svg><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.75 mr-1.5 h-3 w-3 text-green-500/75">
-                    <circle r="12" cy="12" cx="12"></circle>
-                </svg></div><span class="absolute inset-x-0 top-2 text-xs text-slate-500">X-Rank.tsx</span>
-            </div>
-            <div class="grid lg:grid-cols-[auto_1fr]">
-                <div class="mt-2 space-y-1.5 px-5 pb-10">
-                    <p class="mt-4 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        <span class="text-orange-600">const</span> <span class="text-blue-500">getData</span> = <span class="text-pink-500">async</span>() => {
-                    </p>
-                    <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        <span class="text-orange-600">const</span> req = <span class="text-orange-600">await</span> <span class="text-blue-500">fetch</span>(<span class="text-green-600">`</span>${<span class="text-pink-400">process.env.NEXT_PUBLIC_API_URL</span>}<span class="text-green-600">/apis/get_data.php`</span>, {
-                    </p>
-                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        <span class="text-pink-400">method</span>: <span class="text-green-600">"POST"</span>,
-                    </p>
-                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        <span class="text-pink-400">headers</span>: {
-                    </p>
-                    <p class="ml-9 font-mono text-xs font-normal tracking-wide text-green-600">
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    </p>
-                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        },
-                    </p>
-                    <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        <span class="text-pink-400">cache</span>: <span class="text-green-600">"no-store"</span>
-                    </p>
-                    <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        })
-                    </p>
-                    <p class="mt-6 ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
-                        <span class="text-blue-500">setData</span>(<span class="text-orange-600">await</span> req.<span class="text-blue-500">json</span>())
-                    </p>
-                    <p class="font-mono text-xs font-normal tracking-wide text-violet-400">
-                        }
-                    </p>
+        <div class="w-fit mx-auto px-2">
+            <div class="relative rounded-xl inset-shadow-sm shadow-xl p-2 mt-16 mx-8 max-w-[1080px] overflow-hidden mx-auto">
+                <div class="relative flex text-center border-b-1 border-black/20 pb-4">
+                    <div class="flex pl-3.5 pt-3"><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.5 mr-1.5 h-3 w-3 text-red-500/75">
+                        <circle r="12" cy="12" cx="12"></circle>
+                    </svg><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.75 mr-1.5 h-3 w-3 text-yellow-500/75">
+                        <circle r="12" cy="12" cx="12"></circle>
+                    </svg><svg viewBox="0 0 24 24" fill="currentColor" class="-ml-0.75 mr-1.5 h-3 w-3 text-green-500/75">
+                        <circle r="12" cy="12" cx="12"></circle>
+                    </svg></div><span class="absolute inset-x-0 top-2 text-xs text-slate-500">X-Rank.tsx</span>
                 </div>
-                <div class="grid place-items-center w-full pb-8">
-                    <div
-                        class="relative w-full max-w-80 flex flex-wrap items-center justify-center py-3 pl-4 pr-14 rounded-lg text-base font-medium [transition:all_0.5s_ease] border-solid border border-[#f85149] text-[#b22b2b] [&amp;_svg]:text-[#b22b2b] group bg-[linear-gradient(#f851491a,#f851491a)]"
-                    >
-                        <p class="flex flex-row items-center mr-auto gap-x-2">
-                            <svg
-                                stroke="currentColor"
-                                fill="none"
-                                stroke-width="2"
-                                viewBox="0 0 24 24"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                height="28"
-                                width="28"
-                                class="h-7 w-7"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                                ></path>
-                                <path d="M12 9v4"></path>
-                                <path d="M12 17h.01"></path>
-                            </svg>
-                            伺服器流量過多，請稍待片刻
+                <div class="grid lg:grid-cols-[auto_1fr]">
+                    <div class="mt-2 space-y-1.5 px-5 pb-10">
+                        <p class="mt-4 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            <span class="text-orange-600">const</span> <span class="text-blue-500">getData</span> = <span class="text-pink-500">async</span>() => {
                         </p>
+                        <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            <span class="text-orange-600">const</span> req = <span class="text-orange-600">await</span> <span class="text-blue-500">fetch</span>(<span class="text-green-600">`</span>${<span class="text-pink-400">process.env.NEXT_PUBLIC_API_URL</span>}<span class="text-green-600">/apis/get_data.php`</span>, {
+                        </p>
+                        <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            <span class="text-pink-400">method</span>: <span class="text-green-600">"POST"</span>,
+                        </p>
+                        <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            <span class="text-pink-400">headers</span>: {
+                        </p>
+                        <p class="ml-9 font-mono text-xs font-normal tracking-wide text-green-600">
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        </p>
+                        <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            },
+                        </p>
+                        <p class="ml-6 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            <span class="text-pink-400">cache</span>: <span class="text-green-600">"no-store"</span>
+                        </p>
+                        <p class="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            })
+                        </p>
+                        <p class="mt-6 ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
+                            <span class="text-blue-500">setData</span>(<span class="text-orange-600">await</span> req.<span class="text-blue-500">json</span>())
+                        </p>
+                        <p class="font-mono text-xs font-normal tracking-wide text-violet-400">
+                            }
+                        </p>
+                    </div>
+                    <div class="grid place-items-center w-full pb-8 px-12">
+                        <div
+                            class="relative w-full max-w-80 flex flex-wrap items-center justify-center py-3 pl-4 pr-14 rounded-lg text-base font-medium [transition:all_0.5s_ease] border-solid border border-[#f85149] text-[#b22b2b] [&amp;_svg]:text-[#b22b2b] group bg-[linear-gradient(#f851491a,#f851491a)]"
+                        >
+                            <p class="flex flex-row items-center mr-auto gap-x-2 w-64">
+                                <svg
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-width="2"
+                                        viewBox="0 0 24 24"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        height="28"
+                                        width="28"
+                                        class="h-7 w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                            d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                                    ></path>
+                                    <path d="M12 9v4"></path>
+                                    <path d="M12 17h.01"></path>
+                                </svg>
+                                伺服器流量過多，請稍待片刻
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
+            <div class="pt-8">
+                <div
+                    class="w-full max-w-sm py-6 p-4 text-gray-900 bg-white rounded-lg inset-shadow-sm shadow-md"
+                >
+                    <div class="flex">
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl"
+                        >
+                            Kuo
+                        </div>
+                        <div class="ms-3 text-sm font-normal">
+                            <div class="text-sm font-semibold">
+                                PinHsiu0628
+                            </div>
+                            <div class="text-sm font-normal">非常感謝各位對平台的支持！</div>
+                            <div class="text-sm font-normal">但由於目前流量過高，導致伺服器過載</div>
+                            <div class="text-sm font-normal">很抱歉帶給你們不好的用戶體驗</div>
+                            <div class="text-sm font-normal">我們工程團隊將在最短的時間內恢復</div>
+                            <div class="pt-2 text-xs font-medium text-blue-600 dark:text-blue-500">
+                                幾秒前發布
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="py-8 border-t-1 border-black/20">
